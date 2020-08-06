@@ -1,4 +1,5 @@
-.js-repo-nav,
+.Header,
+.js-repo-nav > ul,
 #js-repo-pjax-container > div:first-child > div:first-child {
     max-width: 1280px;
     margin-left: auto;
@@ -9,3 +10,20 @@
 #js-repo-pjax-container > div:first-child {
     box-shadow: 0 1px 0 #E1E4E9;
 }
+
+.js-header-wrapper {
+    background-color: #24292e;
+}
+
+.Header {
+    padding: 0 32px !important;
+}
+
+.Header > div:first-child {
+    padding-left: 16px;
+}
+
+.Header > div:last-child {
+    padding-right: 16px;
+}
+
