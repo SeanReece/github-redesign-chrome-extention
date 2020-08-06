@@ -1,4 +1,4 @@
-# github-redesign-chrome-extention
+# github++ (Chrome Extension)
 Opinionated tweaks to the github redesign in a fancy chrome extension
 
 <p align="center">
@@ -6,7 +6,7 @@ Opinionated tweaks to the github redesign in a fancy chrome extension
 </p>
 
 ### What?
-Github released a [redesign in June 2020](https://github.blog/changelog/2020-06-23-design-updates-to-repositories-and-github-ui/) that was mostly great, but there was a few things that I didn't like about it. Lets try to improve it!
+Github released a [redesign in June 2020](https://github.blog/changelog/2020-06-23-design-updates-to-repositories-and-github-ui/) that was mostly **great**, but there was a few things that I think could be improved. This project aims to tweak the github UI to make it easier to use.
 
 ### Features
 
