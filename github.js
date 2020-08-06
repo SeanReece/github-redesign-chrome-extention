@@ -1,13 +1,15 @@
 console.time('github++')
-const repoUrl = document.querySelector('meta[property="og:url"').getAttribute('content')
-const selectedLink = document.querySelector('meta[name="selected-link"').getAttribute('value')
-const isReleasesSelected = selectedLink === 'repo_releases'
-const isCodeSelected = selectedLink === 'repo_source'
 
 let navTabs = document.querySelector('.UnderlineNav-body')
 let codeTab = navTabs?.children[0]
 
 if (codeTab) {
+    const repoUrl = document.querySelector('meta[property="og:url"').getAttribute('content')
+    const repoName = document.querySelector('meta[name="octolytics-dimension-repository_nwo"').getAttribute('content')
+    const selectedLink = document.querySelector('meta[name="selected-link"').getAttribute('value')
+    const isReleasesSelected = selectedLink === 'repo_releases'
+    const isCodeSelected = selectedLink === 'repo_source'
+console.log(repoName)
     let releaseTab = codeTab.cloneNode(true)
     let releaseTabAnchor = releaseTab.firstElementChild
     let releaseTabSvg = releaseTabAnchor.firstElementChild
@@ -17,12 +19,19 @@ if (codeTab) {
 
     // Get release count
     if (isCodeSelected) {
-        const releaseSidePanel = document.querySelector('a[href$="/releases"]')
-        releaseTabText = releaseSidePanel.innerHTML
-        chrome.storage.local.set({ releaseTabText });
+        const releaseSidePanel = document.querySelector('.BorderGrid-cell a[href$="/releases"]')
+        if (releaseSidePanel) {
+            console.log('SET IT', releaseSidePanel)
+            releaseTabText = releaseSidePanel.innerHTML
+            chrome.storage.local.set({ [repoName]: { releaseTabText }});
+        }
     } else {
-        let uhh = chrome.storage.local.get('releaseTabText', function(data) {
-            releaseTabName.innerHTML = data.releaseTabText
+        chrome.storage.local.get(repoName, function(data) {
+            console.log('DATA', data)
+            if (data[repoName]?.releaseTabText) {
+                console.log('GET IT')
+                releaseTabName.innerHTML = data[repoName].releaseTabText
+            }
         });
     }
 

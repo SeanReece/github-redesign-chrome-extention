@@ -1,6 +1,7 @@
-.Header,
-.js-repo-nav > ul,
-#js-repo-pjax-container > div:first-child > div:first-child {
+body:not(.full-width) .Header,
+body:not(.full-width) .js-repo-nav > ul,
+body:not(.full-width) #js-repo-pjax-container > div:first-child > div:first-child,
+body:not(.full-width) main > div:first-child > div:first-child {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;

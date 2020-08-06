@@ -17,13 +17,12 @@ Github released a [redesign in June 2020](https://github.blog/changelog/2020-06-
 - TODO: Customizable
 - TODO: Collapse files to bring README up
 
-
 #### BEFORE
 <p align="center">
   <img src="./images/before.png" alt="Before Image"/>
 </p>
 
-#### AFTER
+#### AFTER 🚀
 <p align="center">
   <img src="./images/after.png" alt="After Image"/>
 </p>
