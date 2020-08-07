@@ -1,6 +1,8 @@
 # github++ (Chrome Extension)
 Opinionated tweaks to the github redesign in a fancy chrome extension
 
+## [Add to chrome](https://chrome.google.com/webstore/detail/github%20%20/jldinbohjcbakkjhlpmepaamcajlhbdb)
+
 <p align="center">
   <img src="./images/logo.png" alt="Github++ logo"/>
 </p>
